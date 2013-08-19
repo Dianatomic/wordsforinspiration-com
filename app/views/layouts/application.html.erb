@@ -3,7 +3,7 @@
   	<meta charset="utf-8" />
   	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  	<title><%= content_for?(:title) ? yield(:title) : "Untitled" %></title>
+  	<title>Words for Inspiration</title>
 
   	<%= stylesheet_link_tag    "application" %>
   	<%= javascript_include_tag "vendor/custom.modernizr" %>
@@ -11,8 +11,27 @@
   </head>
 
   <body>
+    <nav class="top-bar">
+      <ul class="title-area">
+        <li class="name">
+          <h1><%= link_to "Words for Inspiration", statuses_path %></h1>
+        </li>
+      </ul>
+      <section class="top-bar-section">
+        <ul class="right">
+          <li class="divider"></li>
+          <li><%= link_to "Collectios", statuses_path =%> </li>
+        </ul>
+      </section>
+    </nav>
 
-    <%= yield %>
+    <div class="row">
+      <div class="small-8 columns"><%= yield %></div>
+      <div class="small-4 columns">
+        <h1>About</h1>
+        <p>Create simple yet helpful word collections.</p>
+      </div>
+    </div>
 
     
     <%= javascript_include_tag "application" %>

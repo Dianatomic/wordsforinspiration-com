@@ -1,4 +1,7 @@
 WordsforinspirationCom::Application.routes.draw do
+  resources :statuses
+
+
   get "welcome/index"
 
   # The priority is based upon order of creation:
