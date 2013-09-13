@@ -1,0 +1,13 @@
+<div class="row">
+	<div class="small-10 columns">
+		<p id="notice"><%= notice %></p>
+		<h1>
+		  <%= @status.name %>
+		</h1>
+		<p>
+		  <%= @status.content %>
+		</p>
+		<%= link_to 'Edit', edit_status_path(@status) %> |
+		<%= link_to 'Back', statuses_path %>
+	</div>
+</div>
