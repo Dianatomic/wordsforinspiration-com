@@ -4,6 +4,15 @@
     <p>Create simple yet helpful word collections.</p>
 
     <div class="row">
+      <div class="small-8 columns">
+        <%= form_tag("/search", method: "get") do %>
+          <%= text_field_tag("Search", nil, :placeholder => "What are you writing about?") %>
+      </div>
+      <div class="small-4 columns"><%= submit_tag("Search", class: "button prefix") %></div>
+        <% end %>
+    </div>
+
+    <div class="row">
       <div class="small-12 columns">
         <table>
           <tr>
